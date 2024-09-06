@@ -19,3 +19,8 @@
 
       * Then note that we 'exit program' rather than 'stop run.'
        exit program.
+      * Also I made reference to it in the calling program, but this code with the actual
+      * linkage, must be compiled using -m instead of -x with cobc. That -m stands for
+      * 'build a dynamically loadable module (default), and it creates an .so file
+      * instead of an executable. So basically the same thing an 'ld' linker would
+      * do with an assembly file, or a C linker does with with C file.
