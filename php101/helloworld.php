@@ -101,11 +101,13 @@ echo 'WHILE LOOPS: <br>';
 // I believe the null case is what's happening with the array.
 $array = ['name','email','address'];
 $i = 0;
-while($array[$i]){
+while($i < 3){
   echo "$array[$i]<br>";
   $i++;
 }
-echo "$array[3]<br>"; // nothing is printed, so its empty/null when we get out of bounds
+
+echo '<br><br>';
+// echo "$array[3]<br>"; // nothing is printed, so its empty/null when we get out of bounds
 
 
 // GET:
