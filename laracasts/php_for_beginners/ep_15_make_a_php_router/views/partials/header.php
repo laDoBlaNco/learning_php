@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Episode 14: Superglobals and Current Page Handling</title>
+  <title>Episode 15: Making a PHP Router</title>
   <script src='https://cdn.tailwindcss.com'></script>
 </head>
 <body class="h-full">

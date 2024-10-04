@@ -11,11 +11,11 @@
              <!-- WITH THE USE OF SUPERGLOBALS WE WERE ABLE TO DYNAMICALLY STYLE THE NAVIGATION BUTTONS WITH THE TERNARY OPERATOR
               BUT LET'S MAKE IT EVEN BETTER. WITH MICRO IMPROVEMENT OF ADDING A SMALL FUNCTION INSTEAD OF THE FULL
               SUPERGLOBAL -->
-              <?= is_uri('/') ?>
+          
               <a href="/" class="rounded-md px-3 py-2 text-sm font-medium <?= is_uri('/') ? 'bg-gray-900 text-white':'text-gray-300' ?> hover:bg-gray-700 hover:text-white">Home</a>
-              <a href="/about.php" class="rounded-md px-3 py-2 text-sm font-medium <?= is_uri('/about.php') ? 'bg-gray-900 text-white':'text-gray-300' ?> hover:bg-gray-700 hover:text-white">About Us</a>
-              <a href="/contact.php" class="rounded-md px-3 py-2 text-sm font-medium <?= is_uri('/contact.php') ? 'bg-gray-900 text-white':'text-gray-300' ?> hover:bg-gray-700 hover:text-white">Contact Us</a>
-              <a href="/mission.php" class="rounded-md px-3 py-2 text-sm font-medium <?= is_uri('/mission.php') ? 'bg-gray-900 text-white':'text-gray-300' ?> hover:bg-gray-700 hover:text-white">Our Mission</a>
+              <a href="/about" class="rounded-md px-3 py-2 text-sm font-medium <?= is_uri('/about.php') ? 'bg-gray-900 text-white':'text-gray-300' ?> hover:bg-gray-700 hover:text-white">About Us</a>
+              <a href="/contact" class="rounded-md px-3 py-2 text-sm font-medium <?= is_uri('/contact.php') ? 'bg-gray-900 text-white':'text-gray-300' ?> hover:bg-gray-700 hover:text-white">Contact Us</a>
+              <a href="/mission" class="rounded-md px-3 py-2 text-sm font-medium <?= is_uri('/mission.php') ? 'bg-gray-900 text-white':'text-gray-300' ?> hover:bg-gray-700 hover:text-white">Our Mission</a>
             </div>
           </div>
         </div>
