@@ -1,0 +1,15 @@
+<!-- Unlike all other languages that block out the outside world in
+ functions. Javascript scope is global by default 
+ 
+  - Variables defined outside a function that are referenced inside of a
+    function have global scope
+  - This is a little different than what we would expect. -->
+
+<script>
+  gl = 123;
+  function check() {
+    gl = 456;
+  }
+  check();
+  window.console && console.log(`GL = ${+gl}`);
+</script>
