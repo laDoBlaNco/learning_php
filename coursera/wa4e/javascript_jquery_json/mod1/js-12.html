@@ -1,0 +1,12 @@
+<html>
+  <p>Hello <b><span id="person">Kevin</span></b> here.</p>
+  <script>
+    st = document.getElementById('person').innerHTML;
+    // our way of using null coalescing to make sure we have a console to log
+    // to
+    window.console && console.log('ST = '+st);
+    alert('Hi there ' + st);
+    document.getElementById('person').innerHTML='Ladoblanco';
+    window.console && console.dir(document.getElementById('person'));
+  </script>
+</html>

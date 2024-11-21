@@ -8,6 +8,13 @@
 <body>
   <p>One Paragraph</p>
   <script>
+    // really allows us to console things regardless of the alerts
+    // stopping the code, we can see what's going on. But the end
+    // user won't. 
+
+    // a good way to make sure console is included or working on
+    // the browser is the following idiom
+    // window.console && console.log('...');
     console.log('First log');
     alert('YO');
   </script>

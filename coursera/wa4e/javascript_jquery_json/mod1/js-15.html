@@ -1,0 +1,34 @@
+<html>
+  <body>
+    <p>
+      <a href="#" onclick="add();return false;">More</a>
+    </p>
+    <ul id="the-list">
+      <li>First Item</li>
+    </ul>
+
+    <script>
+      counter=1;
+      console.log(document.getElementById('the-list'));
+
+      function add(){
+        var x=document.createElement('li');
+        x.className='list-item';
+        x.innerHTML='The counter is '+counter;
+        document.getElementById('the-list').appendChild(x);
+        counter++;
+      }
+      // Again no rrcs are happening here. just generating dynamic HTML on
+      // the front end. BUT THIS IS HOW WE DID IT IN THE OLD DAYS '95 to '05
+      // but it got clunky and very large as we added more and more dynamics
+      // jquery to the rescue. While the doms aren't portable, and direct DOM 
+      // manipulation is a little clunky, there are a number of JS frameworks that 
+      // handle the myriad of subtle differences between browswers for us '05 to '06
+
+      // With JQuery, instead of manipulating the DOM, we let JQuery worry about it
+      // We use JQuery functions and everything works much better.
+    </script>
+
+
+  </body>
+</html>
