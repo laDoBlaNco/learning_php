@@ -37,7 +37,10 @@
   <script>
     function update_msg(){
       window.console && console.log('Requesting JSON');
-      $.getJSON('chatlist.php',(rowz)=>{
+      $.ajax({
+        url: 'chatlist.php',
+        cache:false,
+        success:(rowz)=>{
         window.console && console.log('JSON received');
         window.console && console.log(rowz);
         $('#chatcontent').empty();
@@ -46,6 +49,7 @@
           $('#chatcontent').append(`<p>${entry[0]}<br/>&nbsp;&nbsp;${entry[1]}</p>\n`);
         }
         setTimeout('update_msg()',2000);
+        }
       });
     }
 
