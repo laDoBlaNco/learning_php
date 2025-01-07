@@ -1,12 +1,3 @@
-<?php
-session_start();
-echo session_id().'<br>';
-
-
-$_SESSION['counter']??=0;
-$_SESSION['counter']++;
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,6 +8,16 @@ $_SESSION['counter']++;
     <title>Document</title>
 </head>
 <body>
-    <h1>You have visited the page: <?= $_SESSION['counter'] ?> times</h1>
+<header>
+    <a href="index.php">Home</a>
+    <a href="about.php">About</a>
+</header>
+
+<h3>Georgia, Tbilisi 5&#8451;</h3>
+<h1>Welcome to my cool website</h1>
+
+<footer>
+    Copyright &copy; 2020 TheCodeholic
+</footer>
 </body>
 </html>

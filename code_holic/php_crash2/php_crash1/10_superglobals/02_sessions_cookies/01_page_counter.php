@@ -1,10 +1,5 @@
 <?php
-session_start();
-echo session_id().'<br>';
 
-
-$_SESSION['counter']??=0;
-$_SESSION['counter']++;
 ?>
 
 <!doctype html>
@@ -17,6 +12,5 @@ $_SESSION['counter']++;
     <title>Document</title>
 </head>
 <body>
-    <h1>You have visited the page: <?= $_SESSION['counter'] ?> times</h1>
 </body>
 </html>
