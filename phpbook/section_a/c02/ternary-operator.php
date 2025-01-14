@@ -1,7 +1,7 @@
 <?php 
-$stock   = 5;
+$stock   = 0;
 
-$message = ($stock > 0) ? 'In stock' : 'Sold out';
+$message = ($stock > 0) ? 'In stock' : 'More stock coming soon!';
 ?>
 <!DOCTYPE html>
 <html>

@@ -1,5 +1,5 @@
 <?php 
-$stock   = 5;
+$stock   = 0;
 $ordered = 3;
 
 if ($stock > 0) {
