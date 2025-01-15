@@ -1,6 +1,6 @@
 <?php
 $counter = 1;
-$packs   = 5;
+$packs   = 10;
 $price   = 1.99;
 ?>
 <!DOCTYPE html>
@@ -14,7 +14,7 @@ $price   = 1.99;
     <h2>Prices for Multiple Packs</h2>
     <p>
       <?php
-      while ($counter <= $packs) {
+      while ($counter < $packs) {
           echo $counter;
           echo ' packs cost $';
           echo $price * $counter; 

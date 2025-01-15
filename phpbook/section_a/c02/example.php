@@ -7,9 +7,11 @@ if ($name) {                                     // If $name has a value
 }
 
 $product = 'Lollipop';                           // Product name
-$cost    = 2;                                    // Cost of single pack
+// changing the cost to 10
+$cost    = 10;                                    // Cost of single pack
 
-for ($i = 1; $i <= 10; $i++) {
+// making the loop run 20 times
+for ($i = 1; $i <= 20; $i++) {
     $subtotal   = $cost * $i;                    // Total for this quantity
     $discount   = ($subtotal / 100) * ($i * 4);  // Discount for this quantity
     $totals[$i] = $subtotal - $discount;         // Add discounted price to indexed array
@@ -29,6 +31,7 @@ for ($i = 1; $i <= 10; $i++) {
     <tr>
       <td>
         <?= $quantity ?>
+        <!-- interesting use of the ternary operator here 🤓 -->
         pack<?= ($quantity === 1) ? '' : 's'; ?>
       </td>
       <td>
