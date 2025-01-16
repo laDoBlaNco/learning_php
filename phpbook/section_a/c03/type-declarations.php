@@ -1,8 +1,11 @@
 <?php
-$price    = 4;
+// Changed to a string type but no impact since we aren't in
+// 'strict types' mode
+$price    = '4';
 $quantity = 3;
 
-function calculate_total(int $price, int $quantity): int
+// Added the use of the union type for either int or float
+function calculate_total(int|float $price, int|float $quantity): int|float
 {
     return $price * $quantity;
 }

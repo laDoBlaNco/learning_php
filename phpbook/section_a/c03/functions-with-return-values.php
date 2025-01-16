@@ -7,7 +7,7 @@ function create_logo()
 function create_copyright_notice()
 {
     $year    = date('Y');
-    $message = '&copy; ' . $year;
+    $message = '&copy; '.$year.' (The Candy Store)';
     return $message;
 }
 ?>
@@ -19,12 +19,14 @@ function create_copyright_notice()
   </head>
   <body>
     <header>
+      <!-- using the short echo to print the returned result -->
       <h1><?= create_logo() ?>The Candy Store</h1>
     </header>
     <article>
       <h2>Welcome to The Candy Store</h2>
     </article>
     <footer>
+      <!-- Same here with short echo to display returned value -->
       <?= create_logo() ?>
       <?= create_copyright_notice() ?>
     </footer>

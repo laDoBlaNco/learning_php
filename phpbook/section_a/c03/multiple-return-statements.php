@@ -1,5 +1,6 @@
 <?php
-$stock = 25;
+// changed to 8 to see 'Low stock'
+$stock = 8;
 
 function get_stock_message($stock)
 {

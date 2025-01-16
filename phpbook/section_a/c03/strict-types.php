@@ -1,10 +1,11 @@
 <?php
 declare(strict_types = 1);
 
-$price    = 4;
+// Changing $price to a string gives us a Fatal error TypeError
+$price    = 4.5;
 $quantity = 3;
 
-function calculate_total(int $price, int $quantity) : int {
+function calculate_total(int|float $price, int|float $quantity) : int|float {
     return $price * $quantity;
 }
 

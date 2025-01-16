@@ -1,4 +1,5 @@
 <?php
+// discount and tax are optional
 function calculate_cost($cost, $quantity, $discount = 0, $tax = 20,)
 {
     $cost = $cost * $quantity;

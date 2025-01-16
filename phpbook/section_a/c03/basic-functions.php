@@ -7,7 +7,7 @@ function write_logo()
 function write_copyright_notice()
 {
     $year = date('Y');
-    echo '&copy; ' . $year;
+    echo '&copy; ' . $year,' (The Candy Store)';
 }
 ?>
 <!DOCTYPE html>
