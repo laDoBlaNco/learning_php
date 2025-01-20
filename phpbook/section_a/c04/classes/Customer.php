@@ -1,22 +1,27 @@
 <?php
+declare(strict_types=1);
+
 class Customer
 {
-    public  string $forename;
-    public  string $surname;
-    public  string $email;
+    public string $forename;
+    public string $surname;
+    public string $email;
     private string $password;
-    public  array  $accounts;
+    // building on the class on p.157 This property will hold an array
+    // objects, each object being a customer's account.
+    public array $accounts;
 
-    function __construct(string $forename, string $surname, string $email,
-                         string $password, array $accounts)
+    public function __construct(string $forename, string $surname, string $email,
+        string $password, array $accounts)
     {
         $this->forename = $forename;
-        $this->surname  = $surname;
-        $this->email    = $email;
+        $this->surname = $surname;
+        $this->email = $email;
         $this->password = $password;
         $this->accounts = $accounts;
     }
-    function getFullName()
+
+    public function get_fullname()
     {
         return $this->forename . ' ' . $this->surname;
     }

@@ -1,45 +1,56 @@
 <?php
-declare(strict_types = 1);
 
-class Account {
-    public    array  $number;
-    public    string $type;
-    protected float  $balance;
+class Account   
+{
+    // In this example the $number will be an assoc array with account
+    // and routing numbers
+    public array $number;
+    public string $type;
+    protected float $balance;
 
-    public function __construct(array $number, string $type, float $balance = 0.00)
+
+    // our construct method will set our values based on the args
+    // balance will have a default and be optional
+    public function  __construct(array $number, string $type, float $balance=0.00)
     {
-        $this->number  = $number;
-        $this->type    = $type;
+        $this->number = $number;
+        $this->type = $type;
         $this->balance = $balance;
     }
 
+    // deposit and withdraw methods will update the value of $balance
+    // Since the type is float, receiving an int won't cause an error
+    // vice versa would
     public function deposit(float $amount): float
     {
         $this->balance += $amount;
         return $this->balance;
     }
-
     public function withdraw(float $amount): float
     {
         $this->balance -= $amount;
         return $this->balance;
     }
 
-    public function getBalance(): float
+    // A getter called get_balance is added to get the value of the
+    // protected member.
+    public function get_balance(): float
     {
         return $this->balance;
     }
 }
 
-//Create an array to store in the property
-$numbers = ['account_number' => 12345678,
-            'routing_number' => 987654321,];
+// let's create the array for our class
+$numbers = [
+    'account_number' => 87654321,
+    'routing_number' => 123456789,
+];
 
-//Create an instance of the class and set properties
 $account = new Account($numbers, 'Savings', 10.00);
 ?>
+
 <?php include 'includes/header.php'; ?>
-<h2><?= $account->type ?> account</h2>
-Account <?= $account->number['account_number'] ?><br>
-Routing <?= $account->number['routing_number'] ?>
+<h2><?php echo $account->type; ?></h2>
+Account <?php echo $account->number['account_number']; ?> <br>
+Routing <?php echo $account->number['routing_number']; ?> 
 <?php include 'includes/footer.php'; ?>

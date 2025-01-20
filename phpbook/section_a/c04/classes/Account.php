@@ -1,13 +1,16 @@
 <?php
-class Account {
-    public    int    $number;
-    public    string $type;
-    protected float  $balance;
+declare(strict_types= 1);
 
-    public function __construct(int $number, string $type, float $balance = 0.00)
+class Account
+{
+    public AccountNumber $number;
+    public string $type;
+    protected float $balance;
+
+    public function __construct(AccountNumber $numbers, string $type, float $balance=0.00)
     {
-        $this->number  = $number;
-        $this->type    = $type;
+        $this->number = $numbers;
+        $this->type = $type;
         $this->balance = $balance;
     }
 
@@ -23,8 +26,22 @@ class Account {
         return $this->balance;
     }
 
-    public function getBalance(): float
+    public function get_balance(): float
     {
         return $this->balance;
+    }
+
+}
+
+
+class AccountNumber
+{
+    public int $account_number;
+    public int $routing_number;
+
+    public function __construct(int $account_number, int $routing_number)
+    {
+        $this->account_number = $account_number;
+        $this->routing_number = $routing_number;
     }
 }
