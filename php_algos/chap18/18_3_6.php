@@ -6,6 +6,8 @@
  * In the end, a message "You entered a n-digit number" is displayed
  * where n is the total number of digits. Assume that the user enters
  * a valid integer between -9999 and 9999
+ * 
+ * 
  */
 
 $digit = (int)readline("Please enter an integer between -9999 and 9999: ");
