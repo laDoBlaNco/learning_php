@@ -68,5 +68,7 @@ foreach ($nodes as $x_node) {
     echo "\n";
 }
 
+
+
 // we'll learn more in 'Putting Graphs into Action'
 
